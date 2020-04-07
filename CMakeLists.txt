@@ -13,6 +13,8 @@ file(GLOB_RECURSE HEADER_FILES
 		${CMAKE_SOURCE_DIR}/sources/*.h
 		${CMAKE_SOURCE_DIR}/sources/*.hpp)
 
+# Add a shared library target
 add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES})
 
+# Include public header files
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
