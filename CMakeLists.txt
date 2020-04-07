@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(malloc VERSION 0.1 DESCRIPTION "Alexandre Waeles malloc implementation")
+project(malloc VERSION 0.1 DESCRIPTION "Alzundaz malloc contest")
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -15,4 +15,4 @@ file(GLOB_RECURSE HEADER_FILES
 
 add_library(${PROJECT_NAME} SHARED ${HEADER_FILES} ${SOURCE_FILES})
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_SOURCE_DIR}/include)
